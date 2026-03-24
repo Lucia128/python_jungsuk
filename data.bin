@@ -1,0 +1,8 @@
+# 바이너리 파일에서 직접 읽기(형식 맞아야 함)
+arr = np.fromfile('data.bin', dtype=np.float32)
+
+# 파이썬 바이트 버퍼로부터
+buf = b'\x01\x00\x00\x00' * 4
+np.frombuffer(buf, dtype=np.int32)
+
+# 텍스트 CSV 등은 np.loadtxt, np.genfromtxt 또는 pandas 사용 권장
